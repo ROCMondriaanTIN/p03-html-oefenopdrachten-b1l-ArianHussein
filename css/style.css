@@ -1,0 +1,37 @@
+:root{
+    --main-color: rgb(138, 78, 138);
+    --secondary-color: rgb(241, 121, 215);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    background: var(--main-color);
+    color: white;
+    
+
+}
+
+button{
+background-color: var(--secondary-color);
+   color: white;
+   margin-top: auto;
+}
+
+.card{
+   border: 1px solid var(--main-color);
+   display: flex;
+   flex-direction: column;
+  
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    
+}
+
