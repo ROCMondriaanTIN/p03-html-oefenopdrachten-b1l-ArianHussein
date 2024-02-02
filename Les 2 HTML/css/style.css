@@ -1,0 +1,136 @@
+.listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    list-style: none;
+    gap: 10px;
+
+
+
+}
+
+.listing li {
+    border: 2px solid purple;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+
+}
+
+.listing h2 {
+    background-color: rgb(141, 92, 141);
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+
+
+}
+
+.img {
+    height: 1fr;
+    width: 1fr;
+}
+
+.listing .cta {
+    margin-top: auto;
+    border-top: 2px solid purple;
+    padding: 10px;
+    text-align: center;
+
+
+}
+
+.listing .cta a {
+    text-decoration: none;
+    color: purple;
+    font-size: 30px;
+
+}
+
+.listing .body {
+    padding: 10px;
+
+}
+
+:root {
+    --main-color: rgb(196, 132, 202);
+}
+
+header,
+.left-sidebar,
+.right-sidebar,
+.cards-container,
+.footer {
+    border: 5px solid var(--main-color)
+}
+
+
+header {
+    grid-area: hd;
+}
+
+.left-sidebar {
+    grid-area: ls;
+}
+
+.cards-container {
+    grid-area: cc;
+}
+
+.right-sidebar {
+    grid-area: rs;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 50px minmax(200px, 1fr) 50px;
+    grid-template-areas:
+        "hd hd hd"
+        "ls cc rs"
+        "ft ft ft";
+    gap: 10px;
+    padding: 10px;
+}
+
+.cards-container,
+.listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    border: 5px solid var(--main-color);
+    border-radius: 20%;
+    background-image: url(/img/sukuna.jpg);
+    background-repeat: no-repeat;
+
+
+}
+
+@media (max-width: 800px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 50px minmax(200px, 1fr) 50px;
+        grid-template-areas:
+            "hd hd "
+            "ls cc "
+            "ft ft ";
+        gap: 10px;
+      background-color: black;
+
+
+
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+}
